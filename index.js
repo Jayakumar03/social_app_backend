@@ -8,7 +8,7 @@ const app = express()
 
 
 // We are telling that app should use port 4000. if port is not present in env file
-const port = 4000  /*|| process.env.port */ 
+const port = 3000  /*|| process.env.port */ 
 
 
 // Get request for home page
