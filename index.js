@@ -1,5 +1,5 @@
 const express = require("express") // Import the express framework. So that we can start using it 
-// const format  = require("date-format") // Imported date format package form npm
+const format  = require("date-format") // Imported date format package form npm
 
 // Creates an Express application. 
 //  The express() function is a top-level function exported by the express module.
@@ -7,8 +7,8 @@ const app = express()
 
 
 
-// We are telling that app should use port 4000. if port is not present in env file
-const port = 3000  /*|| process.env.port */ 
+// We are telling that app should use port 3000. if port is not present in env file
+const port = process.env.port || 3000  
 
 
 // Get request for home page
@@ -38,7 +38,7 @@ app.get("/api/v1/instagram", (req, res) => {
         age : 25,
         followers : 250,
         follows : 50,
-        // date : format.asString("dd[mm]- hh:mm:ss", new Date()) // used to format data 
+        date : format.asString("dd[mm]- hh:mm:ss", new Date()) // used to format data 
 
 
     }
@@ -58,7 +58,7 @@ app.get("/api/v1/facebook", (req, res) => {
         age : 25,
         followers : 250,
         follows : 50,
-        // date : format.asString("dd[mm]- hh:mm:ss", new Date())
+        date : format.asString("dd[mm]- hh:mm:ss", new Date())
 
 
     }
@@ -77,7 +77,7 @@ app.get("/api/v1/twitter", (req, res) => {
         age : 25,
         followers : 250,
         follows : 50,
-        // date : format.asString("dd[mm]- hh:mm:ss", new Date())
+        date : format.asString("dd[mm]- hh:mm:ss", new Date())
 
 
     }
