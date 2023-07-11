@@ -16,7 +16,8 @@
   "dependencies": {
     "date-format": "^4.0.14",
     "express": "^4.18.2",
-    "swagger-ui-express": "^5.0.0"
+    "swagger-ui-express": "^5.0.0",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
