@@ -6,13 +6,20 @@ const format  = require("date-format") // Imported date format package form npm
 const app = express() 
 
 
+/*Sawgger ui pacakage */
+const swaggerUi = require("swagger-ui-express")
+const YAML = require("yamljs")
+const swaggerDocument = YAML.load("./swagger.yaml")
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+
+
 
 // We are telling that app should use port 3000. if port is not present in env file
 const port = process.env.port || 3000  
 
 
 // Get request for home page
-
 app.get("/", (req, res) => {
 // get Takes two parameters 
 // 1. route =>  "/" means home page  
