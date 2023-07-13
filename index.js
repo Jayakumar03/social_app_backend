@@ -96,7 +96,7 @@ app.get("/api/v1/twitter", (req, res) => {
 })
 
 // Custom route 
-app.get("/api/v1/:id/:token", (req,res) => {
+app.get("/api/v1/:token", (req,res) => {
     // : denote parameter form request, id and token is the value needs to obtained
     console.log(req.params.id)
     console.log(req.params.token)

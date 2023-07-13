@@ -59,6 +59,8 @@ paths:
                         type: string
                      date: 
                        type: number
+       
+       
        post:
          summary: Return username,age,follwers,follows
          responses:
@@ -78,12 +80,14 @@ paths:
                      date: 
                        type: number
      /{token}:
-       get:
-       summary: Return username specified token 
-        parameter:
-          -name: token
-           default: 5
-           in : path
+        get:
+         summary: Return username specified token 
+          parameter:
+           -name: token
+            default: 5
+            in : path
+            schema: 
+            type: string
          responses:
           "200" : #Status code
             description: return an object
@@ -92,13 +96,6 @@ paths:
                 schema:
                 type: object
                    properties:
-                      username:
+                      param:
                         type: string
-                      Follwers: 
-                        type: string
-                      Follows:
-                        type: string
-                     date: 
-                       type: number
-
 
