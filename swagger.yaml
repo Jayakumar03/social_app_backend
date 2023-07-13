@@ -82,12 +82,13 @@ paths:
      /{token}:
         get:
          summary: Return username specified token 
-          parameter:
-           -name: token
-            default: 5
-            in : path
-            schema: 
-            type: string
+         parameters:
+           - name: token
+             default: 5
+             in: path
+             schema: 
+                type: string
+
          responses:
           "200" : #Status code
             description: return an object
