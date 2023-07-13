@@ -5,7 +5,7 @@ info:
   description: This docs is for social app and it's api usecase - Jayakumar 
   version: 1.0.1
 servers:
-  - url: http://localhost:3000/api/v1/ api-name
+  - url: http://localhost:3000/api/v1/
     description: Optional server description, e.g. Main (production) server
   - url: https://localhost:3000/api/v1/ api-name
     description: This is just an dummy url. This doesn't work
@@ -35,3 +35,70 @@ components:
             read: Grants read access
             write: Grants write access
             admin: Grants access to admin operations
+
+
+#paths
+
+paths:
+     /instagram:
+       get:
+         summary: Return username,age,follwers,follows
+         responses:
+          "200" : #Status code
+            description: return an object
+            content: 
+              application/json:
+                schema:
+                type: object
+                   properties:
+                      username:
+                        type: string
+                      Follwers: 
+                        type: string
+                      Follows:
+                        type: string
+                     date: 
+                       type: number
+       post:
+         summary: Return username,age,follwers,follows
+         responses:
+          "200" : #Status code
+            description: return an object
+            content: 
+              application/json:
+                schema:
+                  type: object
+                    properties:
+                      username:
+                        type: string
+                      Follwers: 
+                        type: string
+                      Follows:
+                        type: string
+                     date: 
+                       type: number
+     /{token}:
+       get:
+       summary: Return username specified token 
+        parameter:
+          -name: token
+           default: 5
+           in : path
+         responses:
+          "200" : #Status code
+            description: return an object
+            content: 
+              application/json:
+                schema:
+                type: object
+                   properties:
+                      username:
+                        type: string
+                      Follwers: 
+                        type: string
+                      Follows:
+                        type: string
+                     date: 
+                       type: number
+
+
